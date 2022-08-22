@@ -1,0 +1,6 @@
+
+1. "docker build -t mstraining ." - To Build docker image
+2. "kubectl apply -f deployment.yaml" - To Deploy Application into Kubernetes
+3. "kubectl get services" - Check if service is deployed
+4. check if application is up and running, by address - http://localhost:8081/products
+
