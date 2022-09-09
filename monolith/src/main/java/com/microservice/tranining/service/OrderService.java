@@ -4,11 +4,12 @@ import com.microservice.tranining.common.Const;
 import com.microservice.tranining.dto.Order;
 import com.microservice.tranining.repository.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//@Service
+@Service
 public class OrderService {
 
     @Autowired
