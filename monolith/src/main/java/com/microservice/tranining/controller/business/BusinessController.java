@@ -3,6 +3,7 @@ package com.microservice.tranining.controller.business;
 import com.microservice.tranining.dto.Order;
 import com.microservice.tranining.service.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
 import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.core.ParameterizedTypeReference;
@@ -18,8 +19,13 @@ import java.util.List;
 @RequestMapping("/business")
 public class BusinessController {
 
-        private static final String ORDER_SERVICE_URL = "http://orderms-service:8082/orders/";
-//    private static final String ORDER_SERVICE_URL = "http://localhost:8082/orders/";
+    //    private static final String ORDER_SERVICE_URL = "http://localhost:8082/orders/";
+//        private static final String ORDER_SERVICE_URL = "http://orderms-service:8082/orders/";
+//        private static final String ORDER_SERVICE_URL = "http://gateway-service:8083/gateway/orders/";
+//        private static final String ORDER_SERVICE_URL = "http://localhost:8083/gateway/orders/";
+
+        @Value("${gateway.service.url}")
+        private String ORDER_SERVICE_URL;
 
     @Autowired
     private RestTemplate restTemplate;
