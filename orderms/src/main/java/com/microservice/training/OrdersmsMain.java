@@ -7,10 +7,10 @@ import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
-public class Main {
+public class OrdersmsMain {
 
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        SpringApplication.run(OrdersmsMain.class, args);
     }
 
     @Bean
